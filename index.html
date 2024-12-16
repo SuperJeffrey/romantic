@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>I LOVE YOU ❤️</title>
@@ -28,8 +29,8 @@
             width: 100%;
             font-weight: bold;
         }
-		
-		canvas {
+
+        canvas {
             display: block;
         }
     </style>
@@ -38,73 +39,71 @@
 
 <body>
 
-    <div id="stars"></div>
-    
-<canvas id="canvas" class="canvas" width="1820" height="905"></canvas>
+    <canvas id="canvas" class="canvas" width="1820" height="905"></canvas>
 
-<p class="text" style="color: #F36A3C;">
-    2022年8月28号14:50:00
-    <br/>
-    <span id="span_wife_dt_dt"></span>
-	<br/>
-	  2022年5月28号21:20:00
-    <br/>
-    <span id="span_baby_dt_dt"></span>
-</p>
+    <p class="text" style="color: #F36A3C;">
+        2022年8月28号14:50:00
+        <br />
+        <span id="span_wife_dt_dt"></span>
+        <br />
+        2022年5月28号21:20:00
+        <br />
+        <span id="span_baby_dt_dt"></span>
+    </p>
 
-<audio id="music" autoplay="autoplay" loop="loop">
-    <source src="./bgMusic.mp3" type="audio/mpeg">
-</audio>
-	
-<script language="javascript">
-    function show_date_time() {
-        window.setTimeout("show_date_time()", 1000);
-        meetDay = new Date("8/28/2022 14:50:00");//这个日期是可以修改的
-        today = new Date();
-        timeold = (today.getTime() - meetDay.getTime());
-        sectimeold = timeold / 1000
-        secondsold = Math.floor(sectimeold);
-        msPerDay = 24 * 60 * 60 * 1000
-        e_daysold = timeold / msPerDay
-        daysold = Math.floor(e_daysold);
-        e_hrsold = (e_daysold - daysold) * 24;
-        hrsold = Math.floor(e_hrsold);
-        e_minsold = (e_hrsold - hrsold) * 60;
-        minsold = Math.floor((e_hrsold - hrsold) * 60);
-        seconds = Math.floor((e_minsold - minsold) * 60);
-        span_wife_dt_dt.innerHTML = daysold + "天" + hrsold + "小时" + minsold + "分" + seconds + "秒";
-    }
+    <audio id="music" autoplay="autoplay" loop="loop">
+        <source src="./bgMusic.mp3" type="audio/mpeg">
+    </audio>
 
-  function show_baby_date_time() {
-        window.setTimeout("show_date_time()", 1000);
-        birthday = new Date("5/28/2024 21:20:00");//这个日期是可以修改的
-        today = new Date();
-        timeold = (today.getTime() - birthday.getTime());
-        sectimeold = timeold / 1000
-        secondsold = Math.floor(sectimeold);
-        msPerDay = 24 * 60 * 60 * 1000
-        e_daysold = timeold / msPerDay
-        daysold = Math.floor(e_daysold);
-        e_hrsold = (e_daysold - daysold) * 24;
-        hrsold = Math.floor(e_hrsold);
-        e_minsold = (e_hrsold - hrsold) * 60;
-        minsold = Math.floor((e_hrsold - hrsold) * 60);
-        seconds = Math.floor((e_minsold - minsold) * 60);
-		
-		
-        // 计算月数差异
-        var diffMonths = Math.floor(e_daysold / 30.44);
-        
-        // 计算剩余的天数
-        var remainingDays = Math.floor(e_daysold % 30.44);
-        span_baby_dt_dt.innerHTML = daysold + "天" + hrsold + "小时" + minsold + "分" + seconds + "秒  "+diffMonths+"月"+remainingDays+"天";
-    }
+    <script language="javascript">
+        function show_date_time() {
+            window.setTimeout("show_date_time()", 1000);
+            meetDay = new Date("8/28/2022 14:50:00");//这个日期是可以修改的
+            today = new Date();
+            timeold = (today.getTime() - meetDay.getTime());
+            sectimeold = timeold / 1000
+            secondsold = Math.floor(sectimeold);
+            msPerDay = 24 * 60 * 60 * 1000
+            e_daysold = timeold / msPerDay
+            daysold = Math.floor(e_daysold);
+            e_hrsold = (e_daysold - daysold) * 24;
+            hrsold = Math.floor(e_hrsold);
+            e_minsold = (e_hrsold - hrsold) * 60;
+            minsold = Math.floor((e_hrsold - hrsold) * 60);
+            seconds = Math.floor((e_minsold - minsold) * 60);
+            span_wife_dt_dt.innerHTML = daysold + "天" + hrsold + "小时" + minsold + "分" + seconds + "秒";
+        }
 
-    show_date_time();
-	show_baby_date_time();
-</script>
+        function show_baby_date_time() {
+            window.setTimeout("show_date_time()", 1000);
+            birthday = new Date("5/28/2024 21:20:00");//这个日期是可以修改的
+            today = new Date();
+            timeold = (today.getTime() - birthday.getTime());
+            sectimeold = timeold / 1000
+            secondsold = Math.floor(sectimeold);
+            msPerDay = 24 * 60 * 60 * 1000
+            e_daysold = timeold / msPerDay
+            daysold = Math.floor(e_daysold);
+            e_hrsold = (e_daysold - daysold) * 24;
+            hrsold = Math.floor(e_hrsold);
+            e_minsold = (e_hrsold - hrsold) * 60;
+            minsold = Math.floor((e_hrsold - hrsold) * 60);
+            seconds = Math.floor((e_minsold - minsold) * 60);
 
-  <script>
+
+            // 计算月数差异
+            var diffMonths = Math.floor(e_daysold / 30.44);
+
+            // 计算剩余的天数
+            var remainingDays = Math.floor(e_daysold % 30.44);
+            span_baby_dt_dt.innerHTML = daysold + "天" + hrsold + "小时" + minsold + "分" + seconds + "秒  " + diffMonths + "月" + remainingDays + "天";
+        }
+
+        show_date_time();
+        show_baby_date_time();
+    </script>
+
+    <script>
         const canvas = document.getElementById('canvas');
         const ctx = canvas.getContext('2d');
 
@@ -135,12 +134,12 @@
                 ctx.beginPath();
                 ctx.translate(this.x, this.y);
                 ctx.scale(this.size, this.size);
-                
+
                 // 绘制爱心
                 ctx.moveTo(0, 0);
                 ctx.bezierCurveTo(-2, -2, -4, 2, 0, 4);
                 ctx.bezierCurveTo(4, 2, 2, -2, 0, 0);
-                
+
                 ctx.fillStyle = `rgba(${this.color}, ${this.life})`;
                 ctx.fill();
                 ctx.restore();
@@ -190,4 +189,5 @@
         animate();
     </script>
 </body>
+
 </html>
